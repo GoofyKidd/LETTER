@@ -1,0 +1,149 @@
+/* Import font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Gaya umum */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9E0; /* Warna pink baby */
+    color: #3AA6B9;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: #3AA6B9; /* Aksen warna mint */
+}
+
+/* Gaya umum untuk tombol */
+.btn {
+    padding: 15px 30px;
+    background-color: #3AA6B9; /* Warna mint */
+    color: #F9F9E0; /* Pink baby untuk teks */
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #329aa4; /* Warna mint yang lebih gelap saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); /* Efek hover naik sedikit */
+}
+
+.btn:active {
+    transform: translateY(0); /* Kembali normal saat diklik */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasi fade-in untuk teks */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Hero Section */
+.hero-section {
+    background: #F9F9E0; /* Pink yang lebih terang */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3AA6B9;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-section .overlay {
+    background: rgba(255, 208, 208, 0.9); /* Warna mint dengan transparansi */
+    padding: 40px; /* Diminimalkan untuk perangkat kecil */
+    border-radius: 10px;
+}
+
+/* Modal (untuk konten) */
+.modal {
+    display: none; /* Sembunyikan modal secara default */
+    position: fixed; /* Tetap di posisi yang sama saat digulir */
+    z-index: 1; /* Di atas konten lain */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    background-color: rgba(58, 166, 185, 0.9); /* Mint transparan */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    overflow: auto; /* Aktifkan scroll jika diperlukan */
+}
+
+.modal-content {
+    background-color: #F9F9E0; /* Warna latar belakang modal */
+    padding: 20px; /* Ruang dalam modal */
+    border-radius: 10px; /* Sudut melengkung */
+    text-align: left; /* Teks rata kiri */
+    width: 90%; /* Lebar responsif modal */
+    max-width: 600px; /* Maksimal lebar modal */
+    max-height: 80%; /* Maksimal tinggi modal */
+    overflow-y: auto; /* Gulir vertikal jika konten melebihi tinggi */
+}
+
+.close {
+    float: right; /* Tombol close di kanan */
+    color: #FF9EAA; /* Warna tombol close */
+    font-size: 28px; /* Ukuran font tombol close */
+    font-weight: bold; /* Tebal */
+    cursor: pointer; /* Kursor pointer saat hover */
+}
+
+/* Footer */
+footer {
+    background-color: #F9F9E0; /* Warna mint */
+    color: #3AA6B9; /* Warna teks */
+    text-align: center; /* Rata tengah */
+    padding: 20px; /* Ruang dalam footer */
+    position: relative; /* Posisi relatif */
+    bottom: 0; /* Di bawah */
+    width: 100%; /* Lebar penuh */
+}
+
+/* Musik Latar */
+.music-control {
+    margin: 20px; /* Margin */
+    padding: 10px 20px; /* Ruang dalam */
+    background-color: #FFD0D0; /* Warna mint */
+    color: #3AA6B9; /* Warna teks */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Kursor pointer */
+    transition: background-color 0.3s ease; /* Transisi warna */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 600px) {
+    .btn {
+        padding: 10px 20px; /* Padding lebih kecil */
+        font-size: 14px; /* Ukuran font lebih kecil di handphone */
+    }
+
+    .modal-content {
+        padding: 15px; /* Padding lebih kecil untuk modal di perangkat kecil */
+    }
+
+    .hero-section .overlay {
+        padding: 20px; /* Padding lebih kecil untuk overlay di perangkat kecil */
+    }
+
+    h1 {
+        font-size: 24px; /* Ukuran font h1 lebih kecil di handphone */
+    }
+
+    h2 {
+        font-size: 20px; /* Ukuran font h2 lebih kecil di handphone */
+    }
+}
